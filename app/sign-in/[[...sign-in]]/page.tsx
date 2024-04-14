@@ -18,7 +18,7 @@ export default function Page() {
     if (!isLoaded && !signIn) return null;
 
     try {
-      // Start the Sign Up process using the phone number method
+      // Start the Sign Up process using the email code method
       const { supportedFirstFactors } = await signIn.create({
         identifier: email,
         strategy: "email_code",
